@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        width: 100%;
+        font-family: "Mulish", sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .header {
+        width: 100%;
+        height: 80px;
+        background-color: #21c08b;
+    }
+
+    .header__img {
+        width: 200px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .error_404 {
+        width: 100%;
+        background: linear-gradient(#21c08b, #ab88ff);
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .error_404__pulse {
+        color: white;
+    }
+
+    .text {
+        text-align: center;
+        margin-top: 56px;
+        color: #fff;
+        font-size: 2.5em;
+        text-transform: uppercase;
+    }
+
+    .animated {
+        animation-duration: 2.5s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .pulse {
+        animation-name: pulse;
+        animation-duration: 1s;
+    }
+
+    .error_404__subtitle {
+        color: #fff;
+        font-size: 1.0em;
+    }
+
+
+    .footer {
+        background-color: #8f57fd;
+        display: flex;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+    }
+
+    .footer a {
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        padding-left: 30px;
+        text-decoration: none;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <img class="header__img" src="../assests/logo-platzi-video-BW2.png" alt="">
+    </header>
+
+    <section class="error_404">
+        <div class="error_404__pulse text animated pulse">
+            ERROR 404
+        </div>
+        <div class="error_404__subtitle">
+            Página no encontrada
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="/">Términos de uso</a>
+        <a href="/">Declaración de privacidad</a>
+        <a href="/">Centro de ayuda</a>
+    </footer>
+</body>
+
+</html>
